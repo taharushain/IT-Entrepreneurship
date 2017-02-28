@@ -11,13 +11,12 @@ entrepreneurial impact.
 
 ##Course Objectives
 
-*To provide an entrepreneurial approach to problem solving
+* To provide an entrepreneurial approach to problem solving
 
-*To provide a understanding of programming
+* To provide a understanding of programming
 
-*To provide a understanding of Databases
+* To provide a understanding of Databases
 
-*To develop the modeling/programming skills that will help you in developing 
-android applications
+* To develop the modeling/programming skills that will help you in developing android applications
 
-*To explore web technologies and to interact with them
+* To explore web technologies and to interact with them
