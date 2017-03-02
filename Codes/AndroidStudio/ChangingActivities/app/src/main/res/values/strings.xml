@@ -3,4 +3,8 @@
     <string name="text_view">Hello World!</string>
     <string name="edit_text_hint">Write Message</string>
     <string name="button_text">Print my Message</string>
+
+    <string name="tv_display_hint">Your message!</string>
+
+    <string name="btn_second_activity_text">Go to next</string>
 </resources>

@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/outer_ll_background"
     android:padding="@dimen/activity_first_padding"
     android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorAccent"
+        android:background="@color/inner_ll_background"
         android:padding="@dimen/activity_first_padding"
         android:orientation="vertical">
         <TextView
@@ -28,11 +28,35 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/btn_message"
+            android:layout_marginTop="@dimen/button_top_margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_text"
             android:onClick="my_button_click"
-            />
+            android:background="@color/my_button_background"
+            android:textColor="@color/my_button_text"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:id="@+id/btn_goto_second"
+            android:layout_marginTop="@dimen/button_top_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_second_activity_text"
+            android:onClick="my_button_change_activity"
+            android:background="@color/my_button_background"
+            android:textColor="@color/my_button_text"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:id="@+id/tv_display"
+            android:text="@string/tv_display_hint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

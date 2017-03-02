@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ActivityRevision</string>
+    <string name="btn_text">Exit!</string>
+    <string name="btn_back">Back to horizon!</string>
+</resources>
