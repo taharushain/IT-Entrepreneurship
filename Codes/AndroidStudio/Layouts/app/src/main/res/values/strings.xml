@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Top level app definitions -->
+
+    <string name="app_name">Layouts</string>
+    <string name="ui_button_linear_layout_title">Linear Layout</string>
+    <string name="ui_button_relative_layout_title">Relative Layout</string>
+    <string name="ui_button_scrollview_layout_title">ScrollView Layout</string>
+    <string name="ui_button_listview_layout_title">ListView Layout</string>
+    <string name="ui_button_save_title">Save</string>
+    <string name="ui_button_cancel_title">Cancel</string>
+    <string name="ui_button_date_time_layout_title">Date and Time</string>
+    <string name="ui_button_shared_preference_layout_title">SharedPreferences</string>
+    <string name="save_message">Saved ;-)</string>
+    <string name="cancel_message">Cancel</string>
+    <string name="i_am_here_message">Got here</string>
+
+    <!-- Linear/Scrowlview layout -->
+
+    <string name="ui_button_goback_title">go back</string>
+    <string name="ui_profile_name_hint">Your name here</string>
+    <string name="ui_profile_name_title">Name</string>
+    <string name="ui_profile_email_hint">Your Email here</string>
+    <string name="ui_profile_email_title">Email:</string>
+    <string name="ui_profile_phone_hint">Your phone number here</string>
+    <string name="ui_profile_phone_title">Phone:</string>
+    <string name="ui_profile_gender_title">Gender:</string>
+    <string name="ui_profile_gender_male">Male</string>
+    <string name="ui_profile_gender_female">Female</string>
+    <string name="ui_profile_date_title">Date:</string>
+    <string name="ui_profile_date_hint">MM/DD/YYYY</string>
+    <string name="ui_mood_spinner_title">How are you feeling:</string>
+
+    <string-array name="ui_mood_spinner_entries">
+        <item>Happy</item>
+        <item>Sad</item>
+        <item>Tired</item>
+        <item>Rested</item>
+        <item>Stressed</item>
+        <item>Fair to middling</item>
+        <item>Great</item>
+    </string-array>
+
+    <string name="ui_profile_department_title">Computer Science Department</string>
+    <string name="ui_profile_device_title">Cellphones</string>
+    <string name="ui_profile_demand_title">I want an A for else ;-)</string>
+
+    <!-- Relative layout -->
+
+    <string name="ui_conans_message">Your school motto is "Vox clamantis in deserto," which means "Voice crying out in the wilderness." This is easily the most pathetic school motto I have ever heard. </string>
+    <string name="ui_conans_picture">Conan @ Dartmouth</string>
+
+    <!-- Date and Time -->
+
+    <string name="ui_date_time_title">Set the date and time</string>
+    <string name="ui_button_date_title">Set Date</string>
+    <string name="ui_button_time_title">Set Time</string>
+
+    <!-- SharedPreferences -->
+
+    <string name="preference_name">my_shared_preferences</string>
+    <string name="preference_key_profile_email">profile_email</string>
+    <string name="preference_key_profile_gender">profile_gender</string>
+
+</resources>
