@@ -20,3 +20,8 @@ entrepreneurial impact.
 * To develop the modeling/programming skills that will help you in developing android applications
 
 * To explore web technologies and to interact with them
+
+##Credits and References
+
+* [Android Developers](https://developer.android.com/index.html)
+* [cs.dartmouth.edu](http://www.cs.dartmouth.edu/~campbell/cs65/cs65.html)

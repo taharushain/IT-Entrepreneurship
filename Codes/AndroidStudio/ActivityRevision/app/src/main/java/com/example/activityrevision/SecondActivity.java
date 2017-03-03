@@ -4,11 +4,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
+
+    private static final String TAG = "SecondActivity";
 
     Button btn;
     Context apna_context;
@@ -31,13 +35,25 @@ public class SecondActivity extends AppCompatActivity {
 
         apna_context = this;
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        Log.d(TAG, "Inside Oncreate");
+
+
+        btn.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent kuch_aur = new Intent(SecondActivity.this,MainActivity.class);
-                startActivity(kuch_aur);
+            public boolean onLongClick(View v) {
+                Toast.makeText(getApplication(), "Long Pressed!", Toast.LENGTH_LONG).show();
+                return false;
             }
         });
+
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d(TAG, "Inside OnClick");
+//                Intent kuch_aur = new Intent(SecondActivity.this,MainActivity.class);
+//                startActivity(kuch_aur);
+//            }
+//        });
 
     }
 }

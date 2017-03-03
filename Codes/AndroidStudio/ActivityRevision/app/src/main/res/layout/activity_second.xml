@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_second"
     android:layout_width="match_parent"
@@ -8,25 +8,27 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:weightSum="10"
     tools:context="com.example.activityrevision.SecondActivity">
 
 
-    <Button
-        android:layout_alignParentBottom="true"
-        android:id="@+id/btn_back"
-        android:text="@string/btn_back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <TextView
+        android:layout_weight="9.5"
         android:textColor="@color/colorAccent"
         android:textStyle="bold|italic"
         android:gravity="center"
         android:textSize="@dimen/tv_text_size"
         android:id="@+id/tv_paigham"
-        android:layout_above="@id/btn_back"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_weight="0.5"
+        android:id="@+id/btn_back"
+        android:text="@string/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
-</RelativeLayout>
+</LinearLayout>

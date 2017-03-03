@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorDark">#292828</color>
+
+
+    <color name="textViewOne">#c15353</color>
+    <color name="textViewTwo">#535cc1</color>
+    <color name="textViewThree">#64c153</color>
+    <color name="textViewFour">#a4a440</color>
+    <color name="textViewFive">#dfae4c</color>
+</resources>
