@@ -23,5 +23,7 @@ entrepreneurial impact.
 
 ##Credits and References
 
+* [introcs.cs.princeton.edu](http://introcs.cs.princeton.edu/java/home/)
+* [ntu.edu.sg](https://www.ntu.edu.sg/home/ehchua/programming/index.html)
 * [Android Developers](https://developer.android.com/index.html)
 * [cs.dartmouth.edu](http://www.cs.dartmouth.edu/~campbell/cs65/cs65.html)
