@@ -39,6 +39,7 @@ public class DateAndTimeActivity extends Activity {
 			}
 		};
 
+
 		new TimePickerDialog(DateAndTimeActivity.this, mTimeListener,
 				mDateAndTime.get(Calendar.HOUR_OF_DAY),
 				mDateAndTime.get(Calendar.MINUTE), true).show();
