@@ -68,7 +68,7 @@ public class DateAndTimeActivity extends Activity {
 	private void updateDateAndTimeDisplay() {
 		mDisplayDateTime.setText(DateUtils.formatDateTime(this,
 				mDateAndTime.getTimeInMillis(), DateUtils.FORMAT_SHOW_DATE
-						| DateUtils.FORMAT_SHOW_TIME));
+						| DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_WEEKDAY));
 	}
 
 }
