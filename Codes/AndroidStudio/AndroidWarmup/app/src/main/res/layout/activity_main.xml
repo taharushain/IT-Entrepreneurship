@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="@dimen/main_padding"
+    tools:context="com.example.androidwarmup.MainActivity">
+
+    <EditText
+        android:id="@+id/et_username"
+        android:hint="@string/et_user_name_hint"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_below="@id/et_username"
+        android:inputType="numberPassword"
+        android:id="@+id/et_password"
+        android:gravity="center"
+        android:hint="@string/et_password_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_below="@id/et_password"
+        android:text="Login"
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>
