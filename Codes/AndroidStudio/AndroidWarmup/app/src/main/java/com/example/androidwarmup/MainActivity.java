@@ -43,15 +43,14 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-
-        btn_login.setOnClickListener(new View.OnClickListener() {
+       btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 String user = et_username.getText().toString();
                 String pass = et_password.getText().toString();
 
-                if(checkUserPasswor(user, pass)){
+                if(checkUserPassword(user, pass)){
 
                     SharedPreferences.Editor editor = pref.edit();
                     editor.putBoolean(LOGIN_KEY, true);
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public Boolean checkUserPasswor(String username, String password){
+    public Boolean checkUserPassword(String username, String password){
 
         String[] user_array = {"hamza","faisal","simran","talha","taha","saadahme"};
         String[] password_array = {"1100","1101","1102","1103","1104","1105"};

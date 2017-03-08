@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -15,6 +16,8 @@ import static com.example.androidwarmup.util.LOGIN_KEY;
 import static com.example.androidwarmup.util.PREF_KEY;
 
 public class HomeActivity extends AppCompatActivity {
+
+    private final String TAG = "HomeActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
                         ProfileActivity.class);
 
                 intent.putExtra("position",position);
+
 
                 startActivity(intent);
 

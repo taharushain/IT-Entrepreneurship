@@ -2,16 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:baselineAligned="false"
     android:orientation="vertical"
-    tools:context=".MainLayoutActivity"
-    android:baselineAligned="false">
+    tools:context=".MainLayoutActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/ui_profile_name_title" >
-    </TextView>
+        android:text="@string/ui_profile_name_title"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"></TextView>
 
     <EditText
         android:id="@+id/editName"
@@ -20,15 +22,13 @@
         android:layout_margin="5dp"
         android:hint="@string/ui_profile_name_hint"
         android:inputType="textCapWords"
-        android:singleLine="true" >
-    </EditText>
+        android:singleLine="true"></EditText>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/ui_profile_email_title" >
-    </TextView>
+        android:text="@string/ui_profile_email_title"></TextView>
 
     <EditText
         android:id="@+id/editEmail"
@@ -37,15 +37,13 @@
         android:layout_margin="5dp"
         android:hint="@string/ui_profile_email_hint"
         android:inputType="textEmailAddress"
-        android:singleLine="true" >
-    </EditText>
+        android:singleLine="true"></EditText>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/ui_profile_phone_title" >
-    </TextView>
+        android:text="@string/ui_profile_phone_title"></TextView>
 
     <EditText
         android:id="@+id/editPhone"
@@ -54,22 +52,20 @@
         android:layout_margin="5dp"
         android:hint="@string/ui_profile_phone_hint"
         android:inputType="phone"
-        android:singleLine="true" >
-    </EditText>
+        android:singleLine="true"></EditText>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/ui_profile_gender_title" >
-    </TextView>
+        android:text="@string/ui_profile_gender_title"></TextView>
 
     <RadioGroup
         android:id="@+id/radioGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/radioGenderF"
@@ -83,8 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/ui_profile_gender_male" >
-        </RadioButton>
+            android:text="@string/ui_profile_gender_male"></RadioButton>
     </RadioGroup>
 
     <TextView
@@ -92,16 +87,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/ui_mood_spinner_title" >
-    </TextView>
+        android:text="@string/ui_mood_spinner_title"></TextView>
 
     <Spinner
         android:id="@+id/spinnerInputType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:entries="@array/ui_mood_spinner_entries" >
-    </Spinner>
+        android:entries="@array/ui_mood_spinner_entries"></Spinner>
 
     <Button
         android:id="@+id/btn_goback"

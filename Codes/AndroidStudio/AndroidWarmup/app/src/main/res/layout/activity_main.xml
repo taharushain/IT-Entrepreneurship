@@ -16,13 +16,13 @@
         android:layout_height="wrap_content" />
 
     <EditText
-        android:layout_below="@id/et_username"
-        android:inputType="numberPassword"
         android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_username"
         android:gravity="center"
         android:hint="@string/et_password_hint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:inputType="numberPassword" />
 
     <Button
         android:layout_below="@id/et_password"
