@@ -28,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionbar = getSupportActionBar();
         actionbar.setTitle("ABCD");
 
+
+
+    }
+
+    public void startSecond(View view){
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 
     @Override
