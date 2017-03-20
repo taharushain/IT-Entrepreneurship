@@ -71,7 +71,7 @@ public class CitiesFragment extends Fragment{
 
         String url = Constants.city_url;
 
-// Request a string response from the provided URL.
+        // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
