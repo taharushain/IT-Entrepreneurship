@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Alarms</string>
+    <string name="set_single_alarm">Set Single Alarm</string>
+    <string name="set_repeating_alarm">Set Repeating Alarm</string>
+    <string name="cancel_repeating_alarm">Cancel Repeating Alarm</string>
+    <string name="set_inexact_repeating_alarm">Set Inexact Repeating Alarm</string>
+</resources>
