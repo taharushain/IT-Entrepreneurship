@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dangerous App</string>
+
+
+    <string name="permission_description">Dangerous permission required</string>
+    <string name="permission_label">Dangerous Permission</string>
+</resources>

@@ -1,0 +1,28 @@
+package com.golemtron.orderedbroadcast;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Vibrator;
+import android.util.Log;
+import android.widget.Toast;
+
+/**
+ * Created by taharushain on 3/22/17.
+ */
+
+public class Receiver3 extends BroadcastReceiver {
+    private final String TAG = "Receiver3";
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        Log.i(TAG, "INTENT RECEIVED");
+
+        Vibrator v = (Vibrator) context
+                .getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(500);
+
+        Toast.makeText(context, "INTENT RECEIVED by Receiver3", Toast.LENGTH_LONG).show();
+    }
+
+}
