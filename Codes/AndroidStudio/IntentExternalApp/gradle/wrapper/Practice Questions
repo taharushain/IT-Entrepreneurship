@@ -1,0 +1,139 @@
+Practice Questions:
+
+The Android Platform comprises several components. Which of the following is not a part of the
+Android Platform?
+• Documentation
+• Software Developers Kit
+• Network protocol analyzers
+• Software Stack
+
+(True or False): Android Virtual Devices can be created to mimic specific physical devices, such as a
+Nexus One, or a Galaxy Nexus tablet.
+Ans:
+
+(True or False): Eclipse is the IDE of choice for Android. Other IDEs won't provide all the Android
+development tools that Eclipse does.
+Ans: 
+
+Android's Linux Kernel is not exactly the same as the Linux Kernels typically running on desktop
+machines. Why would Android modify the Linux Kernel for Android?
+• To support new types of graphical user interfaces.
+• To create competing kernel APIs.
+• Mobile devices require features that are not usually needed on traditional desktop devices.
+
+In which of the following programming languages are Android's Native libraries typically written?
+• Java
+• Scala
+• C/C++
+• Python
+
+The Resource Manager helps with internationalizing applications. Which of the following might
+explain why that's important to Android developers?
+• Android phones and applications are sold to and used by people who speak languages other
+than English.
+• US law requires English as the official language of mobile applications.
+• Android applications might crash if they expected an English string, but got a Chinese character
+instead.
+
+Which of following kinds of information does the Location Manager provide to applications? (More
+than one right choices)
+• Ambient temperature.
+• User movement.
+• The direction to Earth's magnetic north.
+• User location.
+
+You must have seen this website by now http://developer.android.com. Which of the following
+statements best describes the purpose of this website?
+• General Android information and documentation.
+• In-person networking.
+• Question and answer forums.
+
+You must have seen this website by now http://stackoverflow.com/questions/tagged/android Which
+of the following statements best describes the purpose of this website?
+• General Android information and documentation.
+• In-person networking.
+• Question and answer forums.
+
+How would you specify a string called "exit_message" whose value is "Goodbye", within a
+strings.xml file?
+• <string name="exit_message">Goodbye</string>
+• <value android:id="string_name">text_string</value>
+• <string> "Goodbye" </string>
+• <string name="string_name">text_string</string>
+
+(True or False) One of the main jobs of the Activity class is to support concurrent access to shared,
+inter-application data.
+Ans:
+
+Which one of the following statements correctly reflects what the setContentView() method does?
+• It inserts a package in the PackageManger's database.
+• It attaches button listeners to the code.
+• It validates the data type of the resource ID.
+• It processes the underlying resource file to create Java Objects corresponding to the elements
+specified in the resource file.
+
+Which of the following seems relevant for JAVA?
+• Low-Level Language
+• High-Level Language
+• Assembly Language
+
+Which is the only language that computers understand?
+Ans:
+
+JVM stands for?
+Ans:
+
+Activity uses which Lifecycle method to setup the user interface?
+Ans:
+
+Threads implement which interface?
+Ans:
+
+(True or False) If we don’t create any threads in the program, then there would be no threads.
+Ans:
+
+(True or False) Blocking the UI thread hurts application responsiveness and it’s right to do that.
+Ans:
+
+(True or False) We can change UI components from any background thread directly.
+Ans:
+
+Which of the following operations are performed by UI Thread in an AsyncTask
+• Performs Work
+• Does setup
+• Indicates progress
+• Publishes intermediate progress
+• Uses results
+
+(True or False) The most recent features are added to the support library's version of Toolbar
+Ans:
+
+Which of the following represents an Intent
+• An operation to be performed
+• Networking Job
+• Messages for the Handler
+• An event that has occurred
+
+The data associated with the Intent is formatted as a
+Ans:
+
+(True or False) The extras in an intent are treated as Key-Value pairs
+Ans: 
+
+The process android uses to infer intent types is called
+Ans:
+
+Android protects resources & data with
+Ans:
+
+Which of the following is not a component used to implement a ListView Layout
+• ListView layout
+• Android Manifest
+• Item Holder Layout
+• ArrayAdapter
+
+(True or False) A subclass inherits all the member variables and methods from its superclasses.
+Ans:
+
+(True or False) The word "polymorphism" means “One form”
+Ans:
