@@ -28,4 +28,5 @@ entrepreneurial impact.
 * [Android Developers](https://developer.android.com/index.html)
 * [cs.dartmouth.edu](http://www.cs.dartmouth.edu/~campbell/cs65/cs65.html)
 * [android-kaizen](http://android-kaizen.com/2015/01/04/tutorial-multi-pane-fragments/)
-* [coursera](https://www.coursera.org/learn/android-programming/)
+* [Coursera - University of Maryland](https://www.coursera.org/learn/android-programming/)
+* [John Hopkins University](https://github.com/jhu-ep-coursera/)
