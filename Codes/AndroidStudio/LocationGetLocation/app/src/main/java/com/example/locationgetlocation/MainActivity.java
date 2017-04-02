@@ -1,54 +1,42 @@
 package com.example.locationgetlocation;
 
+
 import android.Manifest;
-import android.content.Context;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.model.LatLng;
 
-public class MainActivity extends AppCompatActivity {
+import static android.support.v4.content.PermissionChecker.PERMISSION_DENIED;
+import static android.support.v4.content.PermissionChecker.PERMISSION_GRANTED;
 
-    private static final long ONE_MIN = 1000 * 60;
-    private static final long TWO_MIN = ONE_MIN * 2;
-    private static final long FIVE_MIN = ONE_MIN * 5;
-    private static final long MEASURE_TIME = 1000 * 30;
-    private static final long POLLING_FREQ = 1000 * 10;
-    private static final float MIN_ACCURACY = 25.0f;
-    private static final float MIN_LAST_READ_ACCURACY = 500.0f;
-    private static final float MIN_DISTANCE = 10.0f;
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+        LocationListener {
 
-    // Views for display location information
-    private TextView mAccuracyView;
-    private TextView mTimeView;
-    private TextView mLatView;
-    private TextView mLngView;
+    private static final int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 101;
+    private GoogleApiClient mGoogleApiClient;
+    private LocationRequest mLocationRequest;
 
-    private int mTextViewColor = Color.GRAY;
+    private long UPDATE_INTERVAL = 10 * 1000;  /* 10 secs */
+    private long FASTEST_INTERVAL = 2000; /* 2 sec */
 
-    // Current best location estimate
-    private Location mBestReading;
+    private TextView tvLng;
+    private TextView tvLat;
 
-    // Reference to the LocationManager and LocationListener
-    private LocationManager mLocationManager;
-    private LocationListener mLocationListener;
-
-    private final String TAG = "LocationGetLocationActivity";
-
-    private boolean mFirstUpdate = true;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,212 +44,150 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        mAccuracyView = (TextView) findViewById(R.id.accuracy_view);
-        mTimeView = (TextView) findViewById(R.id.time_view);
-        mLatView = (TextView) findViewById(R.id.lat_view);
-        mLngView = (TextView) findViewById(R.id.lng_view);
+        int permissionFineLocationCheck = ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION);
 
-        // Acquire reference to the LocationManager
-        if (null == (mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE)))
-            finish();
+        if (permissionFineLocationCheck == PERMISSION_GRANTED) {
 
-        // Get best last location measurement
-        mBestReading = bestLastKnownLocation(MIN_LAST_READ_ACCURACY, FIVE_MIN);
-
-        // Display last reading information
-        if (null != mBestReading) {
-
-            updateDisplay(mBestReading);
+            permissionsAvailable();
 
         } else {
 
-            mAccuracyView.setText("No Initial Reading Available");
-
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
         }
 
-        mLocationListener = new LocationListener() {
 
-            // Called back when location changes
+        tvLat = (TextView) findViewById(R.id.tvLat);
+        tvLng = (TextView) findViewById(R.id.tvLng);
+    }
 
-            public void onLocationChanged(Location location) {
+    private void permissionsAvailable() {
+        // Create an instance of GoogleAPIClient.
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+        }
+    }
 
-                ensureColor();
+    protected void onStart() {
+        if(mGoogleApiClient!=null)
+            mGoogleApiClient.connect();
+        super.onStart();
+    }
 
-                // Determine whether new location is better than current best
-                // estimate
+    protected void onStop() {
+        LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
 
-                if (null == mBestReading
-                        || location.getAccuracy() < mBestReading.getAccuracy()) {
+        // only stop if it's connected, otherwise we crash
+        if (mGoogleApiClient != null) {
+            mGoogleApiClient.disconnect();
+        }
+        super.onStop();
+    }
 
-                    // Update best estimate
-                    mBestReading = location;
 
-                    // Update display
-                    updateDisplay(location);
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
 
-                    if (mBestReading.getAccuracy() < MIN_ACCURACY)
-                        mLocationManager.removeUpdates(mLocationListener);
+        // Get last known recent location.
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        Location mCurrentLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        // Note that this can be NULL if last location isn't already known.
+        if (mCurrentLocation != null) {
+            // Print current location if not null
+            Log.d("DEBUG", "current location: " + mCurrentLocation.toString());
+            LatLng latLng = new LatLng(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude());
+            tvLat.setText(latLng.latitude+"");
+            tvLng.setText(latLng.longitude+"");
 
-                }
-            }
-
-            public void onStatusChanged(String provider, int status,
-                                        Bundle extras) {
-                // NA
-            }
-
-            public void onProviderEnabled(String provider) {
-                // NA
-            }
-
-            public void onProviderDisabled(String provider) {
-                // NA
-            }
-        };
+        }
+        // Begin polling for new location updates.
+        startLocationUpdates();
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        // Determine whether initial reading is
-        // "good enough". If not, register for
-        // further location updates
-
-        if (null == mBestReading
-                || mBestReading.getAccuracy() > MIN_LAST_READ_ACCURACY
-                || mBestReading.getTime() < System.currentTimeMillis()
-                - TWO_MIN) {
-
-            // Register for network location updates
-            if (null != mLocationManager
-                    .getProvider(LocationManager.NETWORK_PROVIDER)) {
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    ActivityCompat#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for ActivityCompat#requestPermissions for more details.
-                    return;
-                }
-                mLocationManager.requestLocationUpdates(
-                        LocationManager.NETWORK_PROVIDER, POLLING_FREQ,
-                        MIN_DISTANCE, mLocationListener);
-            }
-
-            // Register for GPS location updates
-            if (null != mLocationManager
-                    .getProvider(LocationManager.GPS_PROVIDER)) {
-                mLocationManager.requestLocationUpdates(
-                        LocationManager.GPS_PROVIDER, POLLING_FREQ,
-                        MIN_DISTANCE, mLocationListener);
-            }
-
-            // Schedule a runnable to unregister location listeners
-            Executors.newScheduledThreadPool(1).schedule(new Runnable() {
-
-                @Override
-                public void run() {
-
-
-                    mLocationManager.removeUpdates(mLocationListener);
-
-                }
-            }, MEASURE_TIME, TimeUnit.MILLISECONDS);
+    public void onConnectionSuspended(int i) {
+        if (i == CAUSE_SERVICE_DISCONNECTED) {
+            Toast.makeText(this, "Disconnected. Please re-connect.", Toast.LENGTH_SHORT).show();
+        } else if (i == CAUSE_NETWORK_LOST) {
+            Toast.makeText(this, "Network lost. Please re-connect.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    // Unregister location listeners
     @Override
-    protected void onPause() {
-        super.onPause();
-
-        mLocationManager.removeUpdates(mLocationListener);
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
 
-    // Get the last known location from all providers
-    // return best reading that is as accurate as minAccuracy and
-    // was taken no longer then minAge milliseconds ago. If none,
-    // return null.
+    protected void startLocationUpdates() {
+        // Create the location request
+        mLocationRequest = LocationRequest.create()
+                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                .setInterval(UPDATE_INTERVAL)
+                .setFastestInterval(FASTEST_INTERVAL);
 
-    private Location bestLastKnownLocation(float minAccuracy, long maxAge) {
 
-        Location bestResult = null;
-        float bestAccuracy = Float.MAX_VALUE;
-        long bestAge = Long.MIN_VALUE;
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient,
+                mLocationRequest, this);
 
-        List<String> matchingProviders = mLocationManager.getAllProviders();
+    }
 
-        for (String provider : matchingProviders) {
 
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return null;
-            }
-            Location location = mLocationManager.getLastKnownLocation(provider);
+    @Override
+    public void onLocationChanged(Location location) {
+        // New location has now been determined
+        String msg = "Updated Location: " +
+                Double.toString(location.getLatitude()) + "," +
+                Double.toString(location.getLongitude());
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        // You can now create a LatLng Object for use with maps
+        LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
+        tvLat.setText(latLng.latitude+"");
+        tvLng.setText(latLng.longitude+"");
+    }
 
-            if (location != null) {
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                float accuracy = location.getAccuracy();
-                long time = location.getTime();
+                    permissionsAvailable();
+                    if (!mGoogleApiClient.isConnected() && !mGoogleApiClient.isConnecting())
+                        mGoogleApiClient.connect();
 
-                if (accuracy < bestAccuracy) {
-
-                    bestResult = location;
-                    bestAccuracy = accuracy;
-                    bestAge = time;
-
+                } else {
+                    finish();
                 }
+                return;
             }
         }
-
-        // Return best reading or null
-        if (bestAccuracy > minAccuracy
-                || (System.currentTimeMillis() - bestAge) > maxAge) {
-            return null;
-        } else {
-            return bestResult;
-        }
     }
-
-    // Update display
-    private void updateDisplay(Location location) {
-
-        mAccuracyView.setText("Accuracy:" + location.getAccuracy());
-
-        mTimeView.setText("Time:"
-                + new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", Locale
-                .getDefault()).format(new Date(location.getTime())));
-
-        mLatView.setText("Longitude:" + location.getLongitude());
-
-        mLngView.setText("Latitude:" + location.getLatitude());
-
-    }
-
-    private void ensureColor() {
-        if (mFirstUpdate) {
-            setTextViewColor(mTextViewColor);
-            mFirstUpdate = false;
-        }
-    }
-
-    private void setTextViewColor(int color) {
-
-        mAccuracyView.setTextColor(color);
-        mTimeView.setTextColor(color);
-        mLatView.setTextColor(color);
-        mLngView.setTextColor(color);
-
-    }
-
 }
