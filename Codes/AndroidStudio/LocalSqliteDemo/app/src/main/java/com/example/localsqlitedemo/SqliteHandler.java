@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.BaseColumns;
 import android.util.Log;
 
 import java.util.HashMap;
@@ -19,7 +20,7 @@ public class SqliteHandler extends SQLiteOpenHelper {
 
     // All Static variables
     // Database Version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // Database Name
     private static final String DATABASE_NAME = "com.example.localsqlitedemo";
@@ -28,11 +29,16 @@ public class SqliteHandler extends SQLiteOpenHelper {
     private static final String TABLE_USER = "users";
 
     // Login Table Columns names
+    public static final String KEY_ID = BaseColumns._ID;
     public static final String KEY_NAME = "name";
     public static final String KEY_AGE = "age";
 
 
-
+    private String[] projection = {
+            KEY_ID,
+            KEY_NAME,
+            KEY_AGE
+    };
 
 
 
@@ -44,6 +50,7 @@ public class SqliteHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_LOGIN_TABLE = "CREATE TABLE " + TABLE_USER + "("
+                + KEY_ID + " INTEGER PRIMARY KEY,"
                 + KEY_NAME + " TEXT,"
                 + KEY_AGE + " INTEGER"
                 + ")";
@@ -100,8 +107,49 @@ public class SqliteHandler extends SQLiteOpenHelper {
         // Move to first row
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
-            user.put(KEY_NAME, cursor.getString(0));
-            user.put(KEY_AGE, cursor.getString(1));
+            user.put(KEY_ID, cursor.getString(0));
+            user.put(KEY_NAME, cursor.getString(1));
+            user.put(KEY_AGE, cursor.getString(2));
+        }
+
+        cursor.close();
+        db.close();
+        // return user
+        Log.d(TAG, "Fetching user from Sqlite: " + user.toString());
+
+        return user;
+    }
+    public HashMap<String, String> getUserById(int id) {
+
+        String selection = KEY_ID + " = ?"; // Used for where clause
+        String[] selectionArgs = { id+"" };
+
+        // How you want the results sorted in the resulting Cursor
+        String sortOrder =
+                KEY_NAME + " DESC";
+
+        HashMap<String, String> user = new HashMap<String, String>();
+
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.query(
+                TABLE_USER,                     // The table to query
+                projection,                               // The columns to return
+                selection,                                // The columns for the WHERE clause
+                selectionArgs,                            // The values for the WHERE clause
+                null,                                     // don't group the rows
+                null,                                     // don't filter by row groups
+                sortOrder                                 // The sort order
+        );
+
+
+        // Move to first row
+        cursor.moveToFirst();
+        if (cursor.getCount() > 0) {
+            user.put(KEY_ID, cursor.getString(0));
+            user.put(KEY_NAME, cursor.getString(1));
+            user.put(KEY_AGE, cursor.getString(2));
         }
 
         cursor.close();
