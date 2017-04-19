@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.golemtron.prairiegrainanalyzers.HomeActivity"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.golemtron.prairiegrainanalyzers.HomeActivity">
+    android:baselineAligned="false">
 
-</android.support.constraint.ConstraintLayout>
+    <fragment
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:name="com.golemtron.prairiegrainanalyzers.GrainItemNameFragment"
+        android:id="@+id/names_fragment"
+        android:layout_weight="1"/>
+
+    <fragment
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:name="com.golemtron.prairiegrainanalyzers.GrainItemDescriptionFragment"
+        android:id="@+id/description_fragment"
+        android:layout_weight="2" />
+
+</LinearLayout>

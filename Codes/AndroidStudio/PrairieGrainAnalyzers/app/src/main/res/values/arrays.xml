@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Grain Item Names -->
+    <string-array name="grain_item_names">
+        <item>Corn Low Moisture</item>
+        <item>Hard Red Spring Wheat</item>
+        <item>Canola</item>
+        <item>Green Peas</item>
+        <item>Flax</item>
+        <item>Mustard</item>
+    </string-array>
+
+    <!-- Grain Item Descriptions-->
+    <string-array name="grain_item_descriptions">
+        <item>Corn Low Moisture, Corn Low Moisture, Corn Low Moisture</item>
+        <item>Hard Red Spring Wheat, Hard Red Spring Wheat, Hard Red Spring Wheat</item>
+        <item>Canola, Canola, Canola</item>
+        <item>Green Peas, Green Peas, Green Peas</item>
+        <item>Flax, Flax, Flax</item>
+        <item>Mustard, Mustard, Mustard</item>
+    </string-array>
+
+</resources>
