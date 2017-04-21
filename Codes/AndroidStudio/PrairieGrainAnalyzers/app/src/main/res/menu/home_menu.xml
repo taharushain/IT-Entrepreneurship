@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_previous_results"
+        android:icon="@drawable/ic_previous_results"
+        android:title="Previous Results"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/action_read_id"
+        android:icon="@drawable/ic_read_id"
+        android:title="Read ID"
+        app:showAsAction="ifRoom"/>
+</menu>
