@@ -1,0 +1,702 @@
+Started GET "/" for 127.0.0.1 at 2017-04-12 12:21:44 +0500
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (25.7ms)
+Completed 200 OK in 153ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 12:34:22 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 4234ms (Views: 4189.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 12:38:14 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html within layouts/application
+  Rendered greeter/hello.html within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 12:43:57 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 109ms (Views: 103.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 12:44:18 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 51ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 12:44:21 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 88ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 12:44:25 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 47ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 12:44:27 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 12:44:28 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 125ms (Views: 120.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 12:44:30 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 115ms (Views: 109.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 12:48:19 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 86ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/goodbye" for 127.0.0.1 at 2017-04-12 12:49:51 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/greeter/goodbye"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered collection of /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [1 times] (33.3ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (55.1ms)
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (223.0ms)
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 12:57:03 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (94.8ms)
+Completed 200 OK in 1766ms (Views: 1710.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/goodbye" for 127.0.0.1 at 2017-04-12 12:59:17 +0500
+Processing by GreeterController#goodbye as HTML
+  Rendering greeter/goodbye.html.erb within layouts/application
+  Rendered greeter/goodbye.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 193ms (Views: 183.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 13:09:20 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 181ms (Views: 172.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/goodbye" for 127.0.0.1 at 2017-04-12 13:09:27 +0500
+Processing by GreeterController#goodbye as HTML
+  Rendering greeter/goodbye.html.erb within layouts/application
+  Rendered greeter/goodbye.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 102ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/greeter/hello" for 127.0.0.1 at 2017-04-12 13:10:59 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/greeter/hello"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.6ms)
+  Rendered collection of /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (36.3ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (58.6ms)
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.7ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (244.8ms)
+Started GET "/" for 127.0.0.1 at 2017-04-12 13:11:16 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 93ms (Views: 87.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bye" for 127.0.0.1 at 2017-04-12 13:12:04 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/bye"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered collection of /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (6.4ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.4ms)
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.5ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (129.9ms)
+Started GET "/greeter/goodbye" for 127.0.0.1 at 2017-04-12 13:12:40 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/greeter/goodbye"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendered collection of /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (6.2ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.8ms)
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (133.0ms)
+Started GET "/bye" for 127.0.0.1 at 2017-04-12 13:12:54 +0500
+Processing by GreeterController#goodbye as HTML
+  Rendering greeter/goodbye.html.erb within layouts/application
+  Rendered greeter/goodbye.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 91ms (Views: 86.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:53:36 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 866ms (Views: 810.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:54:35 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 60ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:54:38 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 179ms (Views: 174.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:54:40 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 114ms (Views: 108.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:54:43 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 136ms (Views: 131.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:54:47 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 54ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:54:48 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 55ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:54:52 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:54:54 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:54:56 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 50ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:54:58 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:55:00 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 130ms (Views: 124.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:55:00 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 120ms (Views: 114.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:55:01 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 132ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:55:01 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 119ms (Views: 114.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:55:02 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 119ms (Views: 112.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:55:02 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 109ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:55:02 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 124ms (Views: 114.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 09:55:18 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 10:01:09 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 10:03:03 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 10:09:34 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 10:11:24 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 101ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bye" for 127.0.0.1 at 2017-04-14 10:11:27 +0500
+Processing by GreeterController#goodbye as HTML
+  Rendering greeter/goodbye.html.erb within layouts/application
+  Rendered greeter/goodbye.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 94ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-14 11:47:02 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 94ms (Views: 89.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-04-14 11:47:12 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered collection of /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (32.9ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (32.3ms)
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (126.1ms)
+Started PUT "/__web_console/repl_sessions/a96b1142f9d6e0cb650bbb19607c3a37" for 127.0.0.1 at 2017-04-14 11:47:22 +0500
+Started PUT "/__web_console/repl_sessions/a96b1142f9d6e0cb650bbb19607c3a37" for 127.0.0.1 at 2017-04-14 11:47:25 +0500
+Started GET "/" for 127.0.0.1 at 2017-04-14 12:05:57 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 1253ms (Views: 1208.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2017-04-14 12:06:30 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (60.7ms)
+Completed 500 Internal Server Error in 2152ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8: 	</tr>
+     9: 
+    10: 
+    11: 	<% @courses.each do |course| %>
+    12: 		<tr>
+    13: 			<td> <%= image_tag( course["smallIcon"]) %> </td>
+    14: 			<td> <%= course["name"] %> </td>
+  
+app/views/courses/index.html.erb:11:in `_app_views_courses_index_html_erb___4527257550505085940_47283895162300'
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (30.9ms)
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.1ms)
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (139.1ms)
+Started GET "/" for 127.0.0.1 at 2017-04-17 09:14:26 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 769ms (Views: 730.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2017-04-17 09:15:04 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (24.9ms)
+Completed 500 Internal Server Error in 1438ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8: 	</tr>
+     9: 
+    10: 
+    11: 	<% @courses.each do |course| %>
+    12: 		<tr>
+    13: 			<td> <%= image_tag( course["smallIcon"]) %> </td>
+    14: 			<td> <%= course["name"] %> </td>
+  
+app/views/courses/index.html.erb:11:in `_app_views_courses_index_html_erb__868871117534354419_47140330685380'
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.2ms)
+Started GET "/courses/index" for 127.0.0.1 at 2017-04-17 09:31:06 +0500
+Processing by CoursesController#index as HTML
+Completed   in 106424ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2017-04-17 09:36:27 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 1887ms (Views: 265.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-17 09:38:08 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2017-04-17 09:44:04 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16597ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2017-04-17 10:01:28 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 1596ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2017-04-17 10:01:48 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 1460ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2017-04-17 10:02:07 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1457ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2017-04-17 10:02:18 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1367ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2017-04-17 10:05:30 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 2403ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index?looking_for=math" for 127.0.0.1 at 2017-04-17 10:08:11 +0500
+Processing by CoursesController#index as HTML
+  Parameters: {"looking_for"=>"math"}
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 6610ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2017-04-17 10:09:56 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1640ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-17 10:10:12 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-17 10:11:47 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 1600ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hello" for 127.0.0.1 at 2017-04-17 10:11:53 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hello" for 127.0.0.1 at 2017-04-17 10:12:07 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/hello"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered collection of /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (27.7ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (29.0ms)
+  Rendering /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/taharushain/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.5ms)
+Started GET "/" for 127.0.0.1 at 2017-04-17 10:12:13 +0500
+Processing by GreeterController#hello as HTML
+  Rendering greeter/hello.html.erb within layouts/application
+  Rendered greeter/hello.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-17 10:12:24 +0500
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 1397ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
