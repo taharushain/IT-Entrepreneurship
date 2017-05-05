@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IReviewed</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+
+  	<% flash.each do |key, value| %>
+
+  	<p id= '<%= key %>'><%= value   %></p>
+
+  	<% end %>
+
+    <%= yield %>
+
+  </body>
+</html>
