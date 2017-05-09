@@ -10,25 +10,21 @@
 Book.destroy_all
 
 Reviewer.destroy_all
-rec = Reviewer.create! name: "John Doe", password_digest: "asxas"
+rec = Reviewer.create! name: "John Doe", password_digest: "abcabc"
+rev = Reviewer.create! name: "Jim Doe", password_digest: "abcabc"
 
 Book.create! [
 	{name: "Harry Poter", author: "Jim Carry", reviewer: rec},
 	{name: "Game of Thrones", author: "RR Martin", reviewer: rec},
-	{name: "Alchemist", author: "Caul Poehlo", reviewer: rec},
+	{name: "Alchemist", author: "Caul Poehlo", reviewer: rev},
 	{name: "Peer-e-Kamil", author: "Umair Ahmed",reviewer: rec},
-	{name: "Bang-e-Dara", author: "Allama Iqbal",reviewer: rec}
+	{name: "Bang-e-Dara", author: "Allama Iqbal",reviewer: rev}
 
 ]
 
 book = Book.first
 book.notes.create! title: "Wow", note: "Nice Book"
 book.notes.create! title: "Bad", note: "Waste of time"
-
-
-
-
-
 
 
 
