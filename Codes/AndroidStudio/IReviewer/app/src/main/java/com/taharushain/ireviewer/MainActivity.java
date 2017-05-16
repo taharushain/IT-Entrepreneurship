@@ -2,6 +2,7 @@ package com.taharushain.ireviewer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -76,30 +77,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         try {
-            JSONObject jsonObject = (JSONObject) new JSONTokener(response).nextValue();
-//            Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+            JSONArray jsonArray = (JSONArray) new JSONTokener(response).nextValue();
             Toast.makeText(this, "Response: "+response, Toast.LENGTH_SHORT).show();
+            Log.d("API call", "res:" + response);
 
-//            JSONArray jsonArray = jsonObject.getJSONArray("");
-//            for(int i=0; i< jsonArray.length(); i++){
-//                JSONObject innerJsonObject = (JSONObject) jsonArray.get(i);
-//
-//                Book book = new Book();
-//
-//                earthquake.setDatetime(innerJsonObject.get("datetime").toString());
-//                earthquake.setDepth
-//                        (Float.parseFloat(innerJsonObject.get("depth").toString()));
-//                earthquake.setLng
-//                        (Float.parseFloat(innerJsonObject.get("lng").toString()));
-//                earthquake.setSrc(innerJsonObject.get("src").toString());
-//                earthquake.setEqid(innerJsonObject.get("eqid").toString());
-//                earthquake.setMagnitude(Float.parseFloat(innerJsonObject.get("magnitude").toString()));
-//                earthquake.setLat(Float.parseFloat(innerJsonObject.get("lat").toString()));
-//
-//
-//                earthquakes.add(earthquake);
-//
-//            }
+            for(int i=0; i< jsonArray.length(); i++){
+                JSONObject innerJsonObject = (JSONObject) jsonArray.get(i);
+
+                Book book = new Book();
+                book.setId(innerJsonObject.getInt("id"));
+                book.setAuthor(innerJsonObject.getString("author"));
+                book.setName(innerJsonObject.getString("name"));
+                book.setReviewer_id(innerJsonObject.getInt("reviewer_id"));
+
+                books.add(book);
+
+            }
 
         } catch (JSONException e) {
             e.printStackTrace();

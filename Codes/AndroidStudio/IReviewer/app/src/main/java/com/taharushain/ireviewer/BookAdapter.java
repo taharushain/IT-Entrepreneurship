@@ -39,7 +39,7 @@ class BookAdapter extends ArrayAdapter<Book> {
 
         TextView tv_name = (TextView) convertView.findViewById(R.id.tv_book_item_name);
 
-        tv_name.setText("Book: "+data.get(position).getName());
+        tv_name.setText(""+data.get(position).getName());
 
         return convertView;
     }
