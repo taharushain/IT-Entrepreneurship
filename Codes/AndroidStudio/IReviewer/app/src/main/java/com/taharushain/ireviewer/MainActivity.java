@@ -89,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 book.setAuthor(innerJsonObject.getString("author"));
                 book.setName(innerJsonObject.getString("name"));
                 book.setReviewer_id(innerJsonObject.getInt("reviewer_id"));
-
                 books.add(book);
 
             }
