@@ -1,5 +1,5 @@
 class Api::V1::BooksController < Api::V1::BaseController
-  before_action :set_book, only: [:update, :destroy]
+  before_action :set_book, only: [:update_book, :destroy_book]
 
   def index
     @books = Reviewer.first.books.paginate(page: params[:page], per_page: 10)
@@ -13,29 +13,44 @@ class Api::V1::BooksController < Api::V1::BaseController
   def create
     @book = Reviewer.first.books.new(book_params)
 
-      if @book.save
-        render(
-          json: @book.as_json,
-          status: 201
-          )
-      else
-        render json: @book.errors, status: :unprocessable_entity
-      end
+    if @book.save
+      render(
+        json: @book.as_json,
+        status: 201
+        )
+    else
+      render json: @book.errors, status: :unprocessable_entity
+    end
     
   end
 
-  def update
-      if @book.update(book_params)
-        render :show, status: :ok, location: @book 
-      else
-        render json: @book.errors, status: :unprocessable_entity
-      end
+  def update_book
+    if @book.update(book_params)
+      render(
+        json: @book.as_json(:include => :notes),
+        status: 201
+        ) 
+    else
+      render json: @book.errors, status: :unprocessable_entity
+    end
     
   end
 
-  def destroy
-    @book.destroy
-    head :no_content    
+  def destroy_book
+
+    if @book.destroy
+      render(
+        json: @book.as_json,
+        status: 201
+        ) 
+    else
+      render(
+        json: @book.as_json,
+        status: 401
+        ) 
+
+    end  
+     
   end
 
   private

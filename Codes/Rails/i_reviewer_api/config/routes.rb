@@ -15,7 +15,11 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do 
-      resources :books, only: [:index, :create, :update, :destroy]
+
+      post '/update_book' => "books#update_book"
+      post '/destroy_book' => "books#destroy_book"
+
+      resources :books, only: [:index, :create]
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
