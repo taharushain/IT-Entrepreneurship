@@ -1,0 +1,5 @@
+#!/bin/bash
+        for i in `seq 1 30`;
+        do
+		dd if=/dev/urandom of=EnCt2$i bs=458 count=1
+        done 
